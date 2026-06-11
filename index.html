@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade JS - Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>O que podemos fazer com JavaScript?</h2>
+
+    <br>
+
+    <p>Parte 1 - Manipulação de Elementos HTML</p>
+
+    <!-- Exemplo 1: Mudar texto de um elemento -->
+    <h3>1. Modificar Conteúdo de Texto</h3>
+    <p id="demo">JavaScript pode fazer muitas coisas, como: Mudar texto em arquivo html.</p>
+    <button type="button" onclick="changeText()">Clique para Mudar o Texto</button>
+    <button type="button" onclick="resetText()">Resetar Texto</button>
+
+    <hr>
+
+    <!-- Exemplo 2: Mudar estilo (cor e tamanho) de um elemento -->
+    <h3>2. Modificar Estilo de Elementos</h3>
+    <p id="styleDemo">Você também pode mudar o estilo de elementos, como cor e tamanho.</p>
+    <button type="button" onclick="changeStyle()">Mudar Estilo</button>
+    <button type="button" onclick="resetStyle()">Resetar Estilo</button>
+
+    <hr>
+
+    <!-- Exemplo 3: Adicionar novos conteúdos à página -->
+    <h3>3. Adicionar Novos Itens à Lista</h3>
+    <ul id="listDemo">
+        <li>Banana</li>
+        <li>Maçã</li>
+    </ul>
+    <button type="button" onclick="addItemToList()">Adicionar Novo Item</button>
+
+    <hr>
+    <br>
+
+    <p>Parte 2 - Manipulação de Imagens & Divs</p>
+
+    <!-- Exemplo 4: Alterar Imagens -->
+    <h3>4. Alterar Imagens</h3>
+    <img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" alt="Luz">
+    <br><br>
+    <button type="button" onclick="changeImage('on')">Ligar Lâmpada</button>
+    <button type="button" onclick="changeImage('off')">Desligar Lâmpada</button>
+
+    <hr>
+
+    <!-- Exemplo 5: Alterar Conteúdo de Div -->
+    <h3>5. Alterar Conteúdo de DIV</h3>
+    <div id="myDiv">
+        Alterar div com JavaScript envolve basicamente três passos, 
+        selecionar o elemento com document.getElementById("meudiv"), 
+        alterar o conteúdo com innerHTML ou textContent, 
+        e definir o novo valor.
+    </div>
+    <br>
+    <button type="button" onclick="changeDivContent()">Mudar Conteúdo</button>
+    <button type="button" onclick="resetDivContent()">Resetar Conteúdo</button>
+
+    <hr>
+    <br>
+
+    <p>Parte 3 - Ocultação e Exibição de Elementos</p>
+
+    <!-- Exemplo 6: Ocultar e Exibir Elementos -->
+    <h3>6. Ocultar e Exibir Elementos</h3>
+    <p id="hiddenText">
+        Ocultando o elemento com JavaScript...
+    </p>
+    <br>
+    <button type="button" onclick="hideElement()">Ocultar Elemento</button>
+    <button type="button" onclick="showElement()">Exibir Elemento</button>
+
+    <br>
+    <br>
+    <p>Exemplo 2:</p>
+    <div id="hiddenDiv">
+        <h4>Thiago Silva</h4>
+        <p>Estudante de ADS</p>
+        <img id="perfil" src="img/perfil.jpg" alt="foto Thiago">
+    </div>
+    <br>
+    <button type="button" onclick="hideDiv()">Ocultar Conteúdo</button>
+    <button type="button" onclick="showDiv()">Mostrar Conteúdo</button>
+    
+    <br>
+    <br>
+    <p>Exemplo 3:</p>
+    <button type="button" onclick="alternarDisplay()">Alternar Display</button>
+    <div id="caixaDisplay"></div>
+
+    <hr>
+    <br>
+
+    <p>Parte 4 - Pesquisa sobre outros eventos JavaScript</p>
+
+    <p>Utilizando o site MDN_ (https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Core/Scripting/Events) como base, anexei esses 5 eventos:</p>
+    <br>
+ 
+    <ul>
+        <li>onclick: Para interações do usuário com botões e links</li>
+        <li>onpaste: Para capturar e processar colas de texto</li>
+        <li>onselect: Para detectar seleção de texto</li>
+        <li>onsearch: Para capturar buscas em campos de pesquisa</li>
+        <li>onfocus: Para executar ações quando um campo recebe foco</li>
+    </ul>
+
+    <h3>1. onclick</h3>
+    <p>Para interações do usuário com botões e links</p>
+    <br>
+    <p>Exemplo quando o usuário clica em um elemento da página:</p><br>
+    <button type="button" onclick="alert('Botão clicado!')">Clique aqui</button>
+    <hr>
+
+    <h3>2. onpaste</h3>
+    <p>Para capturar e processar colas de texto</p>
+    <br>
+    <p>Exemplo quando o usuário cola conteúdo em um campo de texto:</p><br>
+    <input type="text" onpaste="alert('Conteúdo colado!')" placeholder="Cole aqui...">
+    <p>Pode ser útil para validar o restringir o conteúdo colado.</p>
+    <hr>
+
+    <h3>3. onselect</h3>
+    <p>Para detectar seleção de texto</p>
+    <br>
+    <p>Exemplo quando o usuário seleciona texto em um elemento:</p><br>
+    <textarea onselect="alert('Texto selecionado!')" placeholder="Digite um texto"></textarea>
+    <p>Pode ser usado para mostar opções extras, como copiar automaticamente ou mostrar dicas de edição.</p>
+    <hr>
+
+    <h3>4. onsearch</h3>
+    <p>Para capturar buscas em campos de pesquisa</p>
+    <br>
+    <p>Exemplo quando o usuário realiza uma busca em um campo de pesquisa:</p><br>
+    <input type="search" id="mySearch" placeholder="Digite sua busca..." oninput="executarPesquisa()" onsearch="executarPesquisa()">
+    
+    <p id="pesquisaResult"></p>
+    <p>Pode ser usado para executar a busca automaticamente em conjunto com oninput e mostrar resultados em tempo real.</p>
+    <hr>
+
+    <h3>5. onfocus</h3>
+    <p>Para executar ações quando um campo recebe foco</p>
+    <br>
+    <p>Exemplo quando um campo de formulário recebe foco:</p><br>
+    <input type="text" onfocus="onFocus()" id="myInput" placeholder="Clique aqui...">
+    <p>Pode ser usado para mostrar dicas/erros de informação ou pré-inserir valores.</p>
+    <hr>
+
+    <script src="index.js"></script>
+</body>
+</html>
