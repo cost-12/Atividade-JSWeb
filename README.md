@@ -25,6 +25,7 @@ O projeto apresenta exemplos práticos das seguintes manipulações com JavaScri
 ### Parte 4: Outros Eventos JavaScript
 
 - Demonstração de 5 eventos comuns do JavaScript com exemplos práticos:
+
   - `onclick`: Exibe um alerta quando um botão é clicado.
   - `onpaste`: Detecta quando o usuário cola um texto em um campo.
   - `onselect`: Identifica quando um texto é selecionado.
